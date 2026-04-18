@@ -1,0 +1,54 @@
+###
+GET http://localhost:8080/api/events
+Accept: application/json
+
+###
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+  "name": "Persistent Event",
+  "location": "Room C"
+}
+
+###
+PUT http://localhost:8080/api/events/1
+Content-Type: application/json
+
+{
+"name": "Updated Event",
+"location": "Room B"
+}
+
+###
+GET http://localhost:8080/api/events/1
+
+###
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+  "name": "To Be Deleted",
+  "location": "Room X"
+}
+
+###
+DELETE http://localhost:8080/api/events/1
+
+###
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+  "name": "",
+  "location": ""
+}
+
+###
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+"name": "Conference",
+"location": "Hall A"
+}
